@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Firebase Google Client ID -->
+    <string name="default_web_client_id">1047658499407-ha4jsnus9b215bkvvnoe7al1ca8f26th.apps.googleusercontent.com</string>
+
+</resources>
