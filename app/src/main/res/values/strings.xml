@@ -4,5 +4,7 @@
 
     <!-- Firebase Google Client ID -->
     <string name="default_web_client_id">1047658499407-ha4jsnus9b215bkvvnoe7al1ca8f26th.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

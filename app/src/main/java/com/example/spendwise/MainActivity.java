@@ -9,7 +9,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.fragment.app.Fragment;
+import com.example.spendwise.TransactionFragment;
+import com.example.spendwise.BudgetFragment;
+import com.example.spendwise.UserProfileFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +33,8 @@ private Button logoutButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        loadFragment(new TransactionFragment());
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         welcomeTextView = findViewById(R.id.welcomeTextView);
@@ -71,5 +76,27 @@ private Button logoutButton;
                 finish();
             }
         });
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            Fragment selectedFragment = null;
+
+            if (item.getItemId() == R.id.nav_transaction) {
+                selectedFragment = new TransactionFragment();
+            } else if (item.getItemId() == R.id.nav_budget) {
+                selectedFragment = new BudgetFragment();
+            } else if (item.getItemId() == R.id.nav_user_profile) {
+                selectedFragment = new UserProfileFragment();
+            }
+            return loadFragment(selectedFragment);
+        });
+    }
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.nav_host_fragment, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
     }
 }
