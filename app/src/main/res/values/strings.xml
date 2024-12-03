@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
     <!-- Firebase Google Client ID -->
-    <string name="default_web_client_id">1047658499407-ha4jsnus9b215bkvvnoe7al1ca8f26th.apps.googleusercontent.com</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_id" translatable="false">1047658499407-ha4jsnus9b215bkvvnoe7al1ca8f26th.apps.googleusercontent.com</string>
 
+    <!-- App-specific strings -->
+    <string name="app_name">SpendWise</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="name_hint">Enter Name</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="welcome_message">Welcome to SpendWise</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="logout">Log Out</string>
+    <string name="profile_updated">Profile updated successfully.</string>
+    <string name="profile_update_failed">Failed to update profile.</string>
+    <string name="picture_upload_failed">Failed to upload profile picture.</string>
+    <string name="password_update_success">Password updated successfully.</string>
+    <string name="password_update_failed">Failed to update password.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
