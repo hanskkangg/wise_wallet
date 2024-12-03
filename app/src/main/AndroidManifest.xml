@@ -19,6 +19,8 @@
             android:value="@string/default_web_client_id" />
 
         <activity android:name=".MainActivity"/>
+        <activity android:name=".EditProfileActivity" />
+
 
         <activity android:name=".LoginActivity"
             android:exported="true">

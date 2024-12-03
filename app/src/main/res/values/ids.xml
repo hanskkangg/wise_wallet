@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="etBudgetAmount" type="id" />
+    <item name="tvStartDate" type="id" />
+    <item name="btnPickStartDate" type="id" />
+    <item name="tvEndDate" type="id" />
+    <item name="btnPickEndDate" type="id" />
+    <item name="btnSaveBudget" type="id" />
+    <item name="tvProgress" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="tvDailyAllowance" type="id" />
+</resources>

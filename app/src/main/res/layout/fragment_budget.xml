@@ -1,16 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BudgetFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Budget Amount -->
+    <EditText
+        android:id="@+id/etBudgetAmount"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Budget Screen"
-        android:textSize="24sp" />
+        android:layout_height="wrap_content"
+        android:hint="Enter Budget Amount ($)"
+        android:inputType="numberDecimal" />
 
-</FrameLayout>
+    <!-- Start Date -->
+    <TextView
+        android:id="@+id/tvStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date: Not Selected" />
+
+    <Button
+        android:id="@+id/btnPickStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Start Date" />
+
+    <!-- End Date -->
+    <TextView
+        android:id="@+id/tvEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date: Not Selected" />
+
+    <Button
+        android:id="@+id/btnPickEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select End Date" />
+
+    <!-- Save/Edit Budget -->
+    <Button
+        android:id="@+id/btnSaveBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Budget" />
+
+    <!-- Progress Bar -->
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remaining: $0 (0%)"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+    <!-- Daily Allowance -->
+    <TextView
+        android:id="@+id/tvDailyAllowance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily Allowance: $0"
+        android:gravity="center"
+        android:padding="8dp" />
+</LinearLayout>
